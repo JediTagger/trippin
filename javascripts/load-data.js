@@ -9,8 +9,6 @@ define(function(require){
   myFirebaseRef.child("trips").on("value", function(snapshot) {
     var trips = snapshot.val();
 
-    console.log(trips);
-
     //This will hold the complete DOM string of trips
     var populatedTemplate = templates.tripTpl(trips);
 
