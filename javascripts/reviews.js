@@ -6,11 +6,11 @@ define(function(require) {
 
   $(document).on("click", "button[id^='add-review#']", function() {
     selectedTripId = $(this).attr("id").split("#")[1];
-    $(".review-entry").toggle;
+    $(".review-container").toggle();
   });
 
   $("#save-review").click(function() {
-    var tripRef = new Firebase('https://jesse-trippin.firebaseio.com/trips' + selectedTripId);
+    var tripRef = new Firebase('https://jesse-trippin.firebaseio.com/trips/' + selectedTripId);
     
     var newReview = {
       date: Date.now(),
