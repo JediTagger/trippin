@@ -6,19 +6,16 @@ define(function(require){
   $("#visited").click(function() {
     visited = true;
   });
-
   $("#wish-list").click(function() {
     visited = false;
   });
 
   $("#add-location").click(function() {
     var newLocation = {
-      location: $("#title").val(),
-      location_type: $("#location").val() || "city",
+      location: $("#location").val(),
+      location_type: $("#location-type").val() || "city",
       visited: visited
     };
-
-    console.log("newLocation is: ", newLocation);
 
     $.ajax({
       url: "https://jesse-trippin.firebaseio.com/trips.json",

@@ -14,14 +14,20 @@
 
   <div id="mainId" class="">
     <form>
-      <label>Title: <input id="title" type="text" name="title" class="" autofocus placeholder="Name your trip"></label>
-      <label>Location Type: <input id="location" type="text" name="location" class="" placeholder="Where was it?"></label>
+      <label>Location: <input id="location" type="text" name="location" class="" autofocus placeholder="Where was it?"></label>
+      <label>Location Type: <select id="location-type" type="text" name="location-type" class="" placeholder="City/State/Country?"></select></label>
       <label>Review: <textarea id="review" type="text" name="review" class="" placeholder="Write a review of your trip"></textarea></label>
     </form>
-    <button id="visited">Add to visited</button>
-    <button id="wish-list">Add to wish list</button>
-    <button id="add-location">Add this location</button>
+    <button id="visited">Visited</button>
+    <button id="wish-list">Wish List</button>
+    <br>
+    <button id="add-location" class="top-marg">Add this location</button>
   </div>  
+
+  <div class="review-container">
+    <textarea class="review-entry"></textarea>
+    <button id="save-review">submit review</button>
+  </div>
 
   <script data-main="javascripts/main" 
           src="lib/bower_components/requirejs/require.js"></script>
